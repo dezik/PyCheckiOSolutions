@@ -1,0 +1,23 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "def largest_histogram(histogram):\r\n    return max(histogram)\r\n\r\n\r\n\
+    if __name__ == \"__main__\":\r\n    #These \"asserts\" using only for self-checking\
+    \ and not necessary for auto-testing\r\n    assert largest_histogram([5]) == 5,\
+    \ \"one is always the biggest\"\r\n    assert largest_histogram([5, 3]) == 6,\
+    \ \"two are smallest X 2\"\r\n    assert largest_histogram([1, 1, 4, 1]) == 4,\
+    \ \"vertical\"\r\n    assert largest_histogram([1, 1, 3, 1]) == 4, \"horizontal\"\
+    \r\n    assert largest_histogram([2, 1, 4, 5, 1, 3, 3]) == 8, \"complex\"\r\n\
+    \    print(\"Done! Go check it!\")"
+  learner_created: false
+status: Unchecked
+code: "def largest_histogram(histogram):\r\n    return max(histogram)\r\n\r\n\r\n\
+  if __name__ == \"__main__\":\r\n    #These \"asserts\" using only for self-checking\
+  \ and not necessary for auto-testing\r\n    assert largest_histogram([5]) == 5,\
+  \ \"one is always the biggest\"\r\n    assert largest_histogram([5, 3]) == 6, \"\
+  two are smallest X 2\"\r\n    assert largest_histogram([1, 1, 4, 1]) == 4, \"vertical\"\
+  \r\n    assert largest_histogram([1, 1, 3, 1]) == 4, \"horizontal\"\r\n    assert\
+  \ largest_histogram([2, 1, 4, 5, 1, 3, 3]) == 8, \"complex\"\r\n    print(\"Done!\
+  \ Go check it!\")"
+seconds_from_change: 9223372036854775807

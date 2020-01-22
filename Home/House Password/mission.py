@@ -1,6 +1,8 @@
 def checkio(data: str) -> bool:
-    # replace this for solution
-    return True or False
+    return len(data) >= 10 and \
+           data.lower() != data and \
+           data.upper() != data and \
+           not data.isalpha()
 
 
 # Some hints
