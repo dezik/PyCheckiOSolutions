@@ -1,0 +1,21 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "def long_repeat(line: str) -> int:\r\n    \"\"\"\r\n        length the longest\
+    \ substring that consists of the same char\r\n    \"\"\"\r\n    # your code here\r\
+    \n    return 0\r\n\r\nif __name__ == '__main__':\r\n    #These \"asserts\" using\
+    \ only for self-checking and not necessary for auto-testing\r\n    assert long_repeat('sdsffffse')\
+    \ == 4, \"First\"\r\n    assert long_repeat('ddvvrwwwrggg') == 3, \"Second\"\r\
+    \n    assert long_repeat('abababaab') == 2, \"Third\"\r\n    assert long_repeat('')\
+    \ == 0, \"Empty\"\r\n    print('\"Run\" is good. How is \"Check\"?')"
+  learner_created: false
+status: Unchecked
+code: "def long_repeat(line: str) -> int:\r\n    \"\"\"\r\n        length the longest\
+  \ substring that consists of the same char\r\n    \"\"\"\r\n    # your code here\r\
+  \n    return 0\r\n\r\nif __name__ == '__main__':\r\n    #These \"asserts\" using\
+  \ only for self-checking and not necessary for auto-testing\r\n    assert long_repeat('sdsffffse')\
+  \ == 4, \"First\"\r\n    assert long_repeat('ddvvrwwwrggg') == 3, \"Second\"\r\n\
+  \    assert long_repeat('abababaab') == 2, \"Third\"\r\n    assert long_repeat('')\
+  \ == 0, \"Empty\"\r\n    print('\"Run\" is good. How is \"Check\"?')"
+seconds_from_change: 9223372036854775807

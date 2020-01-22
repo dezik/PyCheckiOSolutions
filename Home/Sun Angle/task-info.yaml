@@ -1,0 +1,19 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "def sun_angle(time):\r\n    #replace this for solution\r\n    return time\r\
+    \n\r\nif __name__ == '__main__':\r\n    print(\"Example:\")\r\n    print(sun_angle(\"\
+    07:00\"))\r\n\r\n    #These \"asserts\" using only for self-checking and not necessary\
+    \ for auto-testing\r\n    assert sun_angle(\"07:00\") == 15\r\n    assert sun_angle(\"\
+    01:23\") == \"I don't see the sun!\"\r\n    print(\"Coding complete? Click 'Check'\
+    \ to earn cool rewards!\")"
+  learner_created: false
+status: Unchecked
+code: "def sun_angle(time):\r\n    #replace this for solution\r\n    return time\r\
+  \n\r\nif __name__ == '__main__':\r\n    print(\"Example:\")\r\n    print(sun_angle(\"\
+  07:00\"))\r\n\r\n    #These \"asserts\" using only for self-checking and not necessary\
+  \ for auto-testing\r\n    assert sun_angle(\"07:00\") == 15\r\n    assert sun_angle(\"\
+  01:23\") == \"I don't see the sun!\"\r\n    print(\"Coding complete? Click 'Check'\
+  \ to earn cool rewards!\")"
+seconds_from_change: 9223372036854775807

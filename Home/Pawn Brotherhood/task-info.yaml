@@ -1,0 +1,19 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "def safe_pawns(pawns: set) -> int:\r\n    return 0\r\n\r\nif __name__ ==\
+    \ '__main__':\r\n    #These \"asserts\" using only for self-checking and not necessary\
+    \ for auto-testing\r\n    assert safe_pawns({\"b4\", \"d4\", \"f4\", \"c3\", \"\
+    e3\", \"g5\", \"d2\"}) == 6\r\n    assert safe_pawns({\"b4\", \"c4\", \"d4\",\
+    \ \"e4\", \"f4\", \"g4\", \"e5\"}) == 1\r\n    print(\"Coding complete? Click\
+    \ 'Check' to review your tests and earn cool rewards!\")"
+  learner_created: false
+status: Unchecked
+code: "def safe_pawns(pawns: set) -> int:\r\n    return 0\r\n\r\nif __name__ == '__main__':\r\
+  \n    #These \"asserts\" using only for self-checking and not necessary for auto-testing\r\
+  \n    assert safe_pawns({\"b4\", \"d4\", \"f4\", \"c3\", \"e3\", \"g5\", \"d2\"\
+  }) == 6\r\n    assert safe_pawns({\"b4\", \"c4\", \"d4\", \"e4\", \"f4\", \"g4\"\
+  , \"e5\"}) == 1\r\n    print(\"Coding complete? Click 'Check' to review your tests\
+  \ and earn cool rewards!\")"
+seconds_from_change: 9223372036854775807
