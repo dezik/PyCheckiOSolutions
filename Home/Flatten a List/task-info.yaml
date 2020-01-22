@@ -2,18 +2,37 @@ type: checkiO
 files:
 - name: mission.py
   visible: true
-  text: "def flat_list(array):\r\n    return array\r\n\r\nif __name__ == '__main__':\r\
-    \n    assert flat_list([1, 2, 3]) == [1, 2, 3], \"First\"\r\n    assert flat_list([1,\
-    \ [2, 2, 2], 4]) == [1, 2, 2, 2, 4], \"Second\"\r\n    assert flat_list([[[2]],\
-    \ [4, [5, 6, [6], 6, 6, 6], 7]]) == [2, 4, 5, 6, 6, 6, 6, 6, 7], \"Third\"\r\n\
-    \    assert flat_list([-1, [1, [-2], 1], -1]) == [-1, 1, -2, 1, -1], \"Four\"\r\
-    \n    print('Done! Check it')"
+  text: |
+    def flat_list(array):
+        out = []
+        for i in array:
+            if isinstance(i, list):
+                out.extend(flat_list(i))
+            else:
+                out.append(i)
+        return out
+
+
+    if __name__ == '__main__':
+        # assert flat_list([1, 2, 3]) == [1, 2, 3], "First"
+        assert flat_list([1, [2, 2, 2], 4]) == [1, 2, 2, 2, 4], "Second"
+        assert flat_list([[[2]], [4, [5, 6, [6], 6, 6, 6], 7]]) == [2, 4, 5, 6, 6, 6, 6, 6, 7], "Third"
+        assert flat_list([-1, [1, [-2], 1], -1]) == [-1, 1, -2, 1, -1], "Four"
+        print('Done! Check it')
   learner_created: false
-status: Unchecked
-code: "def flat_list(array):\r\n    return array\r\n\r\nif __name__ == '__main__':\r\
-  \n    assert flat_list([1, 2, 3]) == [1, 2, 3], \"First\"\r\n    assert flat_list([1,\
-  \ [2, 2, 2], 4]) == [1, 2, 2, 2, 4], \"Second\"\r\n    assert flat_list([[[2]],\
-  \ [4, [5, 6, [6], 6, 6, 6], 7]]) == [2, 4, 5, 6, 6, 6, 6, 6, 7], \"Third\"\r\n \
-  \   assert flat_list([-1, [1, [-2], 1], -1]) == [-1, 1, -2, 1, -1], \"Four\"\r\n\
-  \    print('Done! Check it')"
-seconds_from_change: 9223372036854775807
+status: Solved
+code: |
+  def flat_list(array):
+      out = []
+      for i in array:
+          out.extend(flat_list(i)) if isinstance(i, list) else out.append(i)
+      return out
+
+
+  if __name__ == '__main__':
+      # assert flat_list([1, 2, 3]) == [1, 2, 3], "First"
+      assert flat_list([1, [2, 2, 2], 4]) == [1, 2, 2, 2, 4], "Second"
+      assert flat_list([[[2]], [4, [5, 6, [6], 6, 6, 6], 7]]) == [2, 4, 5, 6, 6, 6, 6, 6, 7], "Third"
+      assert flat_list([-1, [1, [-2], 1], -1]) == [-1, 1, -2, 1, -1], "Four"
+      print('Done! Check it')
+seconds_from_change: 147
