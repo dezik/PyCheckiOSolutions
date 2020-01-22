@@ -1,7 +1,8 @@
+import collections
+
+
 def frequency_sort(items):
-    key_to_count = {}
-    for item in items:
-        key_to_count[item] = key_to_count.get(item, 0) + 1
+    key_to_count = collections.Counter(items)
     key_to_count = {k: v for k, v in sorted(key_to_count.items(), key=lambda i: i[1], reverse=True)}
     return [key for key in key_to_count for _ in range(key_to_count[key])]
 
