@@ -10,10 +10,6 @@ files:
                not data.isalpha()
 
 
-    # Some hints
-    # Just check all conditions
-
-
     if __name__ == '__main__':
         # These "asserts" using only for self-checking and not necessary for auto-testing
         assert checkio('A1213pokl') == False, "1st example"
@@ -33,10 +29,6 @@ code: |
              not data.isalpha()
 
 
-  # Some hints
-  # Just check all conditions
-
-
   if __name__ == '__main__':
       # These "asserts" using only for self-checking and not necessary for auto-testing
       assert checkio('A1213pokl') == False, "1st example"
@@ -46,4 +38,4 @@ code: |
       assert checkio('123456123456') == False, "5th example"
       assert checkio('QwErTy911poqqqq') == True, "6th example"
       print("Coding complete? Click 'Check' to review your tests and earn cool rewards!")
-seconds_from_change: 4809
+seconds_from_change: 10088
