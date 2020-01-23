@@ -6,58 +6,38 @@ files:
     import re
 
 
-    def has_marker_word(word, subj):
-        union = set(word) & set(subj.lower())
-        return union == set(word)
-
-
     def is_stressful(subj: str) -> bool:
-        """
-            recognize stressful subject
-        """
-        marker_words = ("help", "asap", "urgent")
-        if re.match(r".*!{3,}$", subj):
+        if subj.isupper() or subj.endswith("!!!"):
             return True
-        if subj.upper() == subj:
-            return True
-        for word in marker_words:
-            if has_marker_word(word, subj):
-                return True
-        return False
+        subj = re.sub("[^a-z]", "", subj.lower())
+        for match in re.finditer(r"(\w)\1+", subj):
+            subj = subj.replace(match.group(), match.group(1))
+        return any(x in subj for x in ("help", "asap", "urgent"))
+
 
     if __name__ == '__main__':
-        #These "asserts" are only for self-checking and not necessarily for auto-testing
+        # These "asserts" are only for self-checking and not necessarily for auto-testing
         assert is_stressful("Hi") == False, "First"
         assert is_stressful("I neeed HELP") == True, "Second"
         print('Done! Go Check it!')
   learner_created: false
-status: Unchecked
+status: Solved
 code: |
   import re
 
 
-  def has_marker_word(word, subj):
-      union = set(word) & set(subj.lower())
-      return union == set(word)
-
-
   def is_stressful(subj: str) -> bool:
-      """
-          recognize stressful subject
-      """
-      marker_words = ("help", "asap", "urgent")
-      if re.match(r".*!{3,}$", subj):
+      if subj.isupper() or subj.endswith("!!!"):
           return True
-      if subj.upper() == subj:
-          return True
-      for word in marker_words:
-          if has_marker_word(word, subj):
-              return True
-      return False
+      subj = re.sub("[^a-z]", "", subj.lower())
+      for match in re.finditer(r"(\w)\1+", subj):
+          subj = subj.replace(match.group(), match.group(1))
+      return any(x in subj for x in ("help", "asap", "urgent"))
+
 
   if __name__ == '__main__':
-      #These "asserts" are only for self-checking and not necessarily for auto-testing
+      # These "asserts" are only for self-checking and not necessarily for auto-testing
       assert is_stressful("Hi") == False, "First"
       assert is_stressful("I neeed HELP") == True, "Second"
       print('Done! Go Check it!')
-seconds_from_change: 324942
+seconds_from_change: 1

@@ -1,24 +1,13 @@
 import re
 
 
-def has_marker_word(word, subj):
-    union = set(word) & set(subj.lower())
-    return union == set(word)
-
-
 def is_stressful(subj: str) -> bool:
-    """
-        recognize stressful subject
-    """
-    marker_words = ("help", "asap", "urgent")
-    if re.match(r".*!{3,}$", subj):
+    if subj.isupper() or subj.endswith("!!!"):
         return True
-    if subj.upper() == subj:
-        return True
-    for word in marker_words:
-        if has_marker_word(word, subj):
-            return True
-    return False
+    subj = re.sub("[^a-z]", "", subj.lower())
+    for match in re.finditer(r"(\w)\1+", subj):
+        subj = subj.replace(match.group(), match.group(1))
+    return any(x in subj for x in ("help", "asap", "urgent"))
 
 
 if __name__ == '__main__':
