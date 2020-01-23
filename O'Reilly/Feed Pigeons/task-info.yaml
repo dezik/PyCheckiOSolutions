@@ -1,0 +1,17 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "def checkio(number):\r\n    return 0\r\n\r\nif __name__ == '__main__':\r\n\
+    \    #These \"asserts\" using only for self-checking and not necessary for auto-testing\r\
+    \n    assert checkio(1) == 1, \"1st example\"\r\n    assert checkio(2) == 1, \"\
+    2nd example\"\r\n    assert checkio(5) == 3, \"3rd example\"\r\n    assert checkio(10)\
+    \ == 6, \"4th example\""
+  learner_created: false
+status: Unchecked
+code: "def checkio(number):\r\n    return 0\r\n\r\nif __name__ == '__main__':\r\n\
+  \    #These \"asserts\" using only for self-checking and not necessary for auto-testing\r\
+  \n    assert checkio(1) == 1, \"1st example\"\r\n    assert checkio(2) == 1, \"\
+  2nd example\"\r\n    assert checkio(5) == 3, \"3rd example\"\r\n    assert checkio(10)\
+  \ == 6, \"4th example\""
+seconds_from_change: 9223372036854775807

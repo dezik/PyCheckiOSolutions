@@ -60,4 +60,4 @@ code: |
       assert is_stressful("Hi") == False, "First"
       assert is_stressful("I neeed HELP") == True, "Second"
       print('Done! Go Check it!')
-seconds_from_change: 258824
+seconds_from_change: 324942

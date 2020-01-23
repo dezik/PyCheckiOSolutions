@@ -2,20 +2,46 @@ type: checkiO
 files:
 - name: mission.py
   visible: true
-  text: "def long_repeat(line: str) -> int:\r\n    \"\"\"\r\n        length the longest\
-    \ substring that consists of the same char\r\n    \"\"\"\r\n    # your code here\r\
-    \n    return 0\r\n\r\nif __name__ == '__main__':\r\n    #These \"asserts\" using\
-    \ only for self-checking and not necessary for auto-testing\r\n    assert long_repeat('sdsffffse')\
-    \ == 4, \"First\"\r\n    assert long_repeat('ddvvrwwwrggg') == 3, \"Second\"\r\
-    \n    assert long_repeat('abababaab') == 2, \"Third\"\r\n    assert long_repeat('')\
-    \ == 0, \"Empty\"\r\n    print('\"Run\" is good. How is \"Check\"?')"
+  text: |
+    import re
+
+
+    def long_repeat(line: str) -> int:
+        if len(line) < 2:
+            return len(line)
+        max_len = 1
+        for m in re.finditer(r"(\w)\1+", line):
+            max_len = max(len(m.group()), max_len)
+        return max_len
+
+
+    if __name__ == '__main__':
+        # These "asserts" using only for self-checking and not necessary for auto-testing
+        assert long_repeat('abababa') == 1, "First"
+        assert long_repeat('ddvvrwwwrggg') == 3, "Second"
+        assert long_repeat('abababaab') == 2, "Third"
+        assert long_repeat('') == 0, "Empty"
+        print('"Run" is good. How is "Check"?')
   learner_created: false
-status: Unchecked
-code: "def long_repeat(line: str) -> int:\r\n    \"\"\"\r\n        length the longest\
-  \ substring that consists of the same char\r\n    \"\"\"\r\n    # your code here\r\
-  \n    return 0\r\n\r\nif __name__ == '__main__':\r\n    #These \"asserts\" using\
-  \ only for self-checking and not necessary for auto-testing\r\n    assert long_repeat('sdsffffse')\
-  \ == 4, \"First\"\r\n    assert long_repeat('ddvvrwwwrggg') == 3, \"Second\"\r\n\
-  \    assert long_repeat('abababaab') == 2, \"Third\"\r\n    assert long_repeat('')\
-  \ == 0, \"Empty\"\r\n    print('\"Run\" is good. How is \"Check\"?')"
-seconds_from_change: 9223372036854775807
+status: Solved
+code: |
+  import re
+
+
+  def long_repeat(line: str) -> int:
+      if len(line) < 2:
+          return len(line)
+      max_len = 1
+      for m in re.finditer(r"(\w)\1+", line):
+          max_len = max(len(m.group()), max_len)
+      return max_len
+
+
+  if __name__ == '__main__':
+      # These "asserts" using only for self-checking and not necessary for auto-testing
+      assert long_repeat('abababa') == 1, "First"
+      assert long_repeat('ddvvrwwwrggg') == 3, "Second"
+      assert long_repeat('abababaab') == 2, "Third"
+      assert long_repeat('') == 0, "Empty"
+      print('"Run" is good. How is "Check"?')
+seconds_from_change: 2

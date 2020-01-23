@@ -36,4 +36,4 @@ code: |
       assert time_converter('09:00') == '9:00 a.m.'
       assert time_converter('23:15') == '11:15 p.m.'
       print("Coding complete? Click 'Check' to earn cool rewards!")
-seconds_from_change: 14159
+seconds_from_change: 80277

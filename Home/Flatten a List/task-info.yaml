@@ -6,10 +6,7 @@ files:
     def flat_list(array):
         out = []
         for i in array:
-            if isinstance(i, list):
-                out.extend(flat_list(i))
-            else:
-                out.append(i)
+            out.extend(flat_list(i)) if isinstance(i, list) else out.append(i)
         return out
 
 
@@ -35,4 +32,4 @@ code: |
       assert flat_list([[[2]], [4, [5, 6, [6], 6, 6, 6], 7]]) == [2, 4, 5, 6, 6, 6, 6, 6, 7], "Third"
       assert flat_list([-1, [1, [-2], 1], -1]) == [-1, 1, -2, 1, -1], "Four"
       print('Done! Check it')
-seconds_from_change: 147
+seconds_from_change: 9097
