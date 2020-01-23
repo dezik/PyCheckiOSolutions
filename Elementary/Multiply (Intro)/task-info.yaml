@@ -2,16 +2,32 @@ type: checkiO
 files:
 - name: mission.py
   visible: true
-  text: "def mult_two(a, b):\n    # your code here\n    return None\n\n\nif __name__\
-    \ == '__main__':\n    print(\"Example:\")\n    print(mult_two(3, 2))\n    \n \
-    \   # These \"asserts\" are used for self-checking and not for an auto-testing\n\
-    \    assert mult_two(3, 2) == 6\n    assert mult_two(1, 0) == 0\n    print(\"\
-    Coding complete? Click 'Check' to earn cool rewards!\")\n"
+  text: |
+    def mult_two(a, b):
+        return a * b
+
+
+    if __name__ == '__main__':
+        print("Example:")
+        print(mult_two(3, 2))
+
+        # These "asserts" are used for self-checking and not for an auto-testing
+        assert mult_two(3, 2) == 6
+        assert mult_two(1, 0) == 0
+        print("Coding complete? Click 'Check' to earn cool rewards!")
   learner_created: false
-status: Unchecked
-code: "def mult_two(a, b):\n    # your code here\n    return None\n\n\nif __name__\
-  \ == '__main__':\n    print(\"Example:\")\n    print(mult_two(3, 2))\n    \n   \
-  \ # These \"asserts\" are used for self-checking and not for an auto-testing\n \
-  \   assert mult_two(3, 2) == 6\n    assert mult_two(1, 0) == 0\n    print(\"Coding\
-  \ complete? Click 'Check' to earn cool rewards!\")\n"
-seconds_from_change: 9223372036854775807
+status: Solved
+code: |
+  def mult_two(a, b):
+      return a * b
+
+
+  if __name__ == '__main__':
+      print("Example:")
+      print(mult_two(3, 2))
+
+      # These "asserts" are used for self-checking and not for an auto-testing
+      assert mult_two(3, 2) == 6
+      assert mult_two(1, 0) == 0
+      print("Coding complete? Click 'Check' to earn cool rewards!")
+seconds_from_change: 2071
