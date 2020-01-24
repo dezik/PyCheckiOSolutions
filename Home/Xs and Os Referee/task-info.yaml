@@ -2,29 +2,66 @@ type: checkiO
 files:
 - name: mission.py
   visible: true
-  text: "from typing import List\r\n\r\ndef checkio(game_result: List[str]) -> str:\r\
-    \n    return \"D\" or \"X\" or \"O\"\r\n\r\nif __name__ == '__main__':\r\n   \
-    \ print(\"Example:\")\r\n    print(checkio([\"X.O\",\r\n                   \"\
-    XX.\",\r\n                   \"XOO\"]))\r\n\r\n    #These \"asserts\" using only\
-    \ for self-checking and not necessary for auto-testing\r\n    assert checkio([\r\
-    \n        \"X.O\",\r\n        \"XX.\",\r\n        \"XOO\"]) == \"X\", \"Xs wins\"\
-    \r\n    assert checkio([\r\n        \"OO.\",\r\n        \"XOX\",\r\n        \"\
-    XOX\"]) == \"O\", \"Os wins\"\r\n    assert checkio([\r\n        \"OOX\",\r\n\
-    \        \"XXO\",\r\n        \"OXX\"]) == \"D\", \"Draw\"\r\n    assert checkio([\r\
-    \n        \"O.X\",\r\n        \"XX.\",\r\n        \"XOO\"]) == \"X\", \"Xs wins\
-    \ again\"\r\n    print(\"Coding complete? Click 'Check' to review your tests and\
-    \ earn cool rewards!\")"
+  text: |
+    from typing import List
+
+
+    def checkio(game_result: List[str]) -> str:
+        all_lines = game_result[:]
+        all_lines.append("".join([all_lines[x][x] for x in range(3)]))
+        all_lines.append("".join([all_lines[x][2 - x] for x in range(3)]))
+        all_lines.extend(["".join([all_lines[x][y] for x in range(3)]) for y in range(3)])
+        return "X" if "XXX" in all_lines else "O" if "OOO" in all_lines else "D"
+
+
+    if __name__ == '__main__':
+        assert checkio([
+            "X.O",
+            "XX.",
+            "XOO"]) == "X", "Xs wins"
+        assert checkio([
+            "OO.",
+            "XOX",
+            "XOX"]) == "O", "Os wins"
+        assert checkio([
+            "OOX",
+            "XXO",
+            "OXX"]) == "D", "Draw"
+        assert checkio([
+            "O.X",
+            "XX.",
+            "XOO"]) == "X", "Xs wins again"
+        print("Coding complete? Click 'Check' to review your tests and earn cool rewards!")
   learner_created: false
-status: Unchecked
-code: "from typing import List\r\n\r\ndef checkio(game_result: List[str]) -> str:\r\
-  \n    return \"D\" or \"X\" or \"O\"\r\n\r\nif __name__ == '__main__':\r\n    print(\"\
-  Example:\")\r\n    print(checkio([\"X.O\",\r\n                   \"XX.\",\r\n  \
-  \                 \"XOO\"]))\r\n\r\n    #These \"asserts\" using only for self-checking\
-  \ and not necessary for auto-testing\r\n    assert checkio([\r\n        \"X.O\"\
-  ,\r\n        \"XX.\",\r\n        \"XOO\"]) == \"X\", \"Xs wins\"\r\n    assert checkio([\r\
-  \n        \"OO.\",\r\n        \"XOX\",\r\n        \"XOX\"]) == \"O\", \"Os wins\"\
-  \r\n    assert checkio([\r\n        \"OOX\",\r\n        \"XXO\",\r\n        \"OXX\"\
-  ]) == \"D\", \"Draw\"\r\n    assert checkio([\r\n        \"O.X\",\r\n        \"\
-  XX.\",\r\n        \"XOO\"]) == \"X\", \"Xs wins again\"\r\n    print(\"Coding complete?\
-  \ Click 'Check' to review your tests and earn cool rewards!\")"
-seconds_from_change: 9223372036854775807
+status: Solved
+code: |
+  from typing import List
+
+
+  def checkio(game_result: List[str]) -> str:
+      all_lines = game_result[:]
+      all_lines.append("".join([all_lines[x][x] for x in range(3)]))
+      all_lines.append("".join([all_lines[x][2 - x] for x in range(3)]))
+      all_lines.extend(["".join([all_lines[x][y] for x in range(3)]) for y in range(3)])
+      return "X" if "XXX" in all_lines else "O" if "OOO" in all_lines else "D"
+
+
+  if __name__ == '__main__':
+      assert checkio([
+          "X.O",
+          "XX.",
+          "XOO"]) == "X", "Xs wins"
+      assert checkio([
+          "OO.",
+          "XOX",
+          "XOX"]) == "O", "Os wins"
+      assert checkio([
+          "OOX",
+          "XXO",
+          "OXX"]) == "D", "Draw"
+      assert checkio([
+          "O.X",
+          "XX.",
+          "XOO"]) == "X", "Xs wins again"
+      print("Coding complete? Click 'Check' to review your tests and earn cool rewards!")
+seconds_from_change: 2

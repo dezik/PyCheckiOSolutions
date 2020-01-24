@@ -2,16 +2,14 @@ from typing import List
 
 
 def checkio(game_result: List[str]) -> str:
-    return "D" or "X" or "O"
+    all_lines = game_result[:]
+    all_lines.append("".join([all_lines[x][x] for x in range(3)]))
+    all_lines.append("".join([all_lines[x][2 - x] for x in range(3)]))
+    all_lines.extend(["".join([all_lines[x][y] for x in range(3)]) for y in range(3)])
+    return "X" if "XXX" in all_lines else "O" if "OOO" in all_lines else "D"
 
 
 if __name__ == '__main__':
-    print("Example:")
-    print(checkio(["X.O",
-                   "XX.",
-                   "XOO"]))
-
-    # These "asserts" using only for self-checking and not necessary for auto-testing
     assert checkio([
         "X.O",
         "XX.",
