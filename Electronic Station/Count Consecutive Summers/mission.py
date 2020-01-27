@@ -1,6 +1,14 @@
 def count_consecutive_summers(num):
-    # your code here
-    return None
+    count = 1
+    for i in range(num // 2 + 1, 0, -1):
+        for j in range(i - 1, 0, -1):
+            i += j
+            if i == num:
+                count += 1
+            elif i < num:
+                continue
+            break
+    return count
 
 
 if __name__ == '__main__':

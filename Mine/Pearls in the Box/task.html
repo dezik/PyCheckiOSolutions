@@ -1,0 +1,68 @@
+<div style="text-align: center">
+    <img src="https://py-static.checkio.org/media/task/media/d0b3d87300db416eb106aa7b69782626/title.png" style="max-height: 350px">
+</div>
+<p>
+    To start the game they put several black and white pearls in one of the boxes.
+    Each robot has <strong>N</strong> moves, after which the initial set is being restored for the next game.
+    Each turn, the robot takes a pearl out of the box and puts one of the opposite color back.
+    The winner is the one who takes the white pearl on the <strong>Nth</strong> move.
+</p>
+
+<p>
+    Our robots don't like uncertainty, that's why they want to know the probability of drawing a white pearl on the Nth move.
+    The probability is a value between 0 (0% chance or will not happen) and 1 (100% chance or will happen).
+    The result is a float from 0 to 1 with two decimal digits of precision (&plusmn;0.01).
+</p>
+
+<p>
+    You are given a start set of pearls as a string that contains "b" (black) and "w" (white) and the number of the move
+    (N).
+    The order of the pearls does not matter.
+</p>
+
+<p style="text-align: center;">
+    <img class="for_info_only" title="probability" src="https://py-static.checkio.org/media/task/media/d0b3d87300db416eb106aa7b69782626/probability.png" alt="probability" style="max-height:600px"/>
+</p>
+
+<p>
+    <strong>Input: </strong> The start sequence of the pearls as a string and the move number as an integer.
+</p>
+
+<p>
+    <strong>Output: </strong> The probability for a white pearl as a float.
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Example:</strong>
+    </p>
+    <pre class="brush: python">
+checkio('bbw', 3) == 0.48
+checkio('wwb', 3) == 0.52
+checkio('www', 3) == 0.56
+checkio('bbbb', 1) == 0
+checkio('wwbb', 4) == 0.5
+checkio('bwbwbwb', 5) == 0.48
+</pre>
+</div>
+
+<p class="for_info_only">
+    <strong>How it is used: </strong>
+    This task introduces you to the basics of probability theory and statistics.
+    Fun fact: regardless of the initial state, as the number of moves increases, the probability approaches 0.5!
+</p>
+
+
+<p>
+    <strong>Precondition:</strong>
+    0 < N &le; 20<br>
+    0 < |pearls| &le; 20<br>
+</p>
+
+<!--
+<p class="for_info_only">
+    <strong>How to use TryIt: </strong><br>
+    <iframe width="640" height="360" src="//www.youtube.com/embed/wVb7VoMzByo" frameborder="0" allowfullscreen></iframe>
+</p>
+-->

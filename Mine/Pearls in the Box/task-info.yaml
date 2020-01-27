@@ -1,0 +1,25 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "def checkio(marbles: str, step: int) -> float:\r\n    return 0.50\r\n\r\n\
+    #These \"asserts\" using only for self-checking and not necessary for auto-testing\r\
+    \nif __name__ == '__main__':\r\n    print(\"Example:\")\r\n    print(checkio('bbw',\
+    \ 3))\r\n\r\n    assert checkio('bbw', 3) == 0.48, \"1st example\"\r\n    assert\
+    \ checkio('wwb', 3) == 0.52, \"2nd example\"\r\n    assert checkio('www', 3) ==\
+    \ 0.56, \"3rd example\"\r\n    assert checkio('bbbb', 1) == 0, \"4th example\"\
+    \r\n    assert checkio('wwbb', 4) == 0.5, \"5th example\"\r\n    assert checkio('bwbwbwb',\
+    \ 5) == 0.48, \"6th example\"\r\n    print(\"Coding complete? Click 'Check' to\
+    \ earn cool rewards!\")"
+  learner_created: false
+status: Unchecked
+code: "def checkio(marbles: str, step: int) -> float:\r\n    return 0.50\r\n\r\n#These\
+  \ \"asserts\" using only for self-checking and not necessary for auto-testing\r\n\
+  if __name__ == '__main__':\r\n    print(\"Example:\")\r\n    print(checkio('bbw',\
+  \ 3))\r\n\r\n    assert checkio('bbw', 3) == 0.48, \"1st example\"\r\n    assert\
+  \ checkio('wwb', 3) == 0.52, \"2nd example\"\r\n    assert checkio('www', 3) ==\
+  \ 0.56, \"3rd example\"\r\n    assert checkio('bbbb', 1) == 0, \"4th example\"\r\
+  \n    assert checkio('wwbb', 4) == 0.5, \"5th example\"\r\n    assert checkio('bwbwbwb',\
+  \ 5) == 0.48, \"6th example\"\r\n    print(\"Coding complete? Click 'Check' to earn\
+  \ cool rewards!\")"
+seconds_from_change: 9223372036854775807

@@ -1,0 +1,82 @@
+<style>
+    p.quote-source {
+        float: right;
+        font-size: 10px;
+    }
+</style>
+
+<div class="story">
+    <!--<img src="https://py-static.checkio.org/media/task/media/97e1976f421343b3ba553161b44a63e2/220px-Monkey-typing.jpg"-->
+    <!--style="float: left; margin: 10px;">-->
+
+    <p>
+        In a race, the quickest runner can never overtake the slowest,
+        since the pursuer must first reach the point whence the pursued started,
+        so that the slower must always hold a lead.
+    </p>
+
+    <p class="quote-source">
+         – as recounted by Aristotle, Physics VI:9, 239b15
+    </p>
+
+    <div style="clear: right;"></div>
+</div>
+
+<p>
+    "Achilles and the tortoise" is one of the famous
+    <a href="http://en.wikipedia.org/wiki/Zeno%27s_paradoxes">Zeno's paradoxes</a>.
+    Nikola wants to check the validity of the paradox and constructed two robots for this purpose:
+    Achilleborg (A1 -- fast agile prototype) and Tortoimenator (T2 -- heavy slow cyborg).
+</p>
+
+<p>
+    A1 is faster than T2, so it has a <strong>X</strong> seconds head start on A1.
+    For <strong>X</strong> seconds T2 will move at <strong>t2_speed*X</strong> metres.
+    So A1 must first reach the point whence T2 already reached.
+    But T2 is moving and next step for A1 is to reach the next point and so on to <a href="http://en.wikipedia.org/wiki/Infinity">infinity</a>.
+    The paradox is correct in theory,
+    but in practice A1 easily outruns T2. Hm... maybe we can calculate when A1 will catch up to T2.
+</p>
+
+
+<p style="text-align: center;">
+    <img class="for_info_only" title="A1-T2" src="https://py-static.checkio.org/media/task/media/97e1976f421343b3ba553161b44a63e2/A1-T2.png" alt="A1-T2" width="390px"/>
+    <img class="for_editor_only" title="A1-T2" src="https://py-static.checkio.org/media/task/media/97e1976f421343b3ba553161b44a63e2/A1-T2.png" alt="A1-T2" width="380px"/>
+</p>
+
+<p>
+    You are given A1 and T2’s speed in m/s as well as the length of the advantage T2 has in seconds.
+    Try to count the time when from when A1 come abreast with T2 (count from T2 start).
+    The result should be given in seconds with precious &plusmn;10<sup>-8</sup>.
+</p>
+<p>
+    <strong>Input: </strong> Three arguments. Speeds of A1 and T2 and advantage as integers.
+</p>
+
+<p>
+    <strong>Output: </strong> The time when A1 catch up T2 (count from T2 start) as an integer or float.
+</p>
+
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Example:</strong>
+    </p>
+    <pre class="brush: python">
+chase(6, 3, 2) == 4
+chase(10, 1, 10) == 11.11111111
+    </pre>
+</div>
+
+<p class="for_info_only">
+    <strong>How it is used: </strong>
+    Let's return to school and remember our basic math principles.
+    Sometimes simple arithmetic allows us to resolve difficult paradox problems easily.
+</p>
+
+<p>
+    <strong>Precondition:</strong><br>
+    t2_speed &lt; a1_speed &lt; 343<br>
+    0 &lt; advantage &le; 60
+</p>

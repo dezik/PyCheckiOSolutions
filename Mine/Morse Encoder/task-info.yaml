@@ -1,0 +1,39 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "MORSE = {'a': '.-',    'b': '-...',  'c': '-.-.',\r\n         'd': '-..',\
+    \   'e': '.',     'f': '..-.',\r\n         'g': '--.',   'h': '....',  'i': '..',\r\
+    \n         'j': '.---',  'k': '-.-',   'l': '.-..',\r\n         'm': '--',   \
+    \ 'n': '-.',    'o': '---',\r\n         'p': '.--.',  'q': '--.-',  'r': '.-.',\r\
+    \n         's': '...',   't': '-',     'u': '..-',\r\n         'v': '...-',  'w':\
+    \ '.--',   'x': '-..-',\r\n         'y': '-.--',  'z': '--..',  '0': '-----',\r\
+    \n         '1': '.----', '2': '..---', '3': '...--',\r\n         '4': '....-',\
+    \ '5': '.....', '6': '-....',\r\n         '7': '--...', '8': '---..', '9': '----.'\r\
+    \n        }\r\n\r\ndef morse_encoder(text):\r\n    #replace this for solution\r\
+    \n    return text\r\n\r\nif __name__ == '__main__':\r\n    print(\"Example:\"\
+    )\r\n    print(morse_encoder('some text'))\r\n\r\n    #These \"asserts\" using\
+    \ only for self-checking and not necessary for auto-testing\r\n    assert morse_encoder(\"\
+    some text\") == \"... --- -- .   - . -..- -\"\r\n    assert morse_encoder(\"2018\"\
+    ) == \"..--- ----- .---- ---..\"\r\n    assert morse_encoder(\"It was a good day\"\
+    ) == \".. -   .-- .- ...   .-   --. --- --- -..   -.. .- -.--\"\r\n    print(\"\
+    Coding complete? Click 'Check' to earn cool rewards!\")"
+  learner_created: false
+status: Unchecked
+code: "MORSE = {'a': '.-',    'b': '-...',  'c': '-.-.',\r\n         'd': '-..', \
+  \  'e': '.',     'f': '..-.',\r\n         'g': '--.',   'h': '....',  'i': '..',\r\
+  \n         'j': '.---',  'k': '-.-',   'l': '.-..',\r\n         'm': '--',    'n':\
+  \ '-.',    'o': '---',\r\n         'p': '.--.',  'q': '--.-',  'r': '.-.',\r\n \
+  \        's': '...',   't': '-',     'u': '..-',\r\n         'v': '...-',  'w':\
+  \ '.--',   'x': '-..-',\r\n         'y': '-.--',  'z': '--..',  '0': '-----',\r\n\
+  \         '1': '.----', '2': '..---', '3': '...--',\r\n         '4': '....-', '5':\
+  \ '.....', '6': '-....',\r\n         '7': '--...', '8': '---..', '9': '----.'\r\n\
+  \        }\r\n\r\ndef morse_encoder(text):\r\n    #replace this for solution\r\n\
+  \    return text\r\n\r\nif __name__ == '__main__':\r\n    print(\"Example:\")\r\n\
+  \    print(morse_encoder('some text'))\r\n\r\n    #These \"asserts\" using only\
+  \ for self-checking and not necessary for auto-testing\r\n    assert morse_encoder(\"\
+  some text\") == \"... --- -- .   - . -..- -\"\r\n    assert morse_encoder(\"2018\"\
+  ) == \"..--- ----- .---- ---..\"\r\n    assert morse_encoder(\"It was a good day\"\
+  ) == \".. -   .-- .- ...   .-   --. --- --- -..   -.. .- -.--\"\r\n    print(\"\
+  Coding complete? Click 'Check' to earn cool rewards!\")"
+seconds_from_change: 9223372036854775807

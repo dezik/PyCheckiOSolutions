@@ -1,0 +1,16 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "def checkio(data):\r\n\r\n    #replace this for solution\r\n    return \"\
+    \"\r\n\r\n#These \"asserts\" using only for self-checking and not necessary for\
+    \ auto-testing\r\nif __name__ == '__main__':\r\n    assert checkio(\"(2,2),(6,2),(2,6)\"\
+    ) == \"(x-4)^2+(y-4)^2=2.83^2\"\r\n    assert checkio(\"(3,7),(6,9),(9,7)\") ==\
+    \ \"(x-6)^2+(y-5.75)^2=3.25^2\""
+  learner_created: false
+status: Unchecked
+code: "def checkio(data):\r\n\r\n    #replace this for solution\r\n    return \"\"\
+  \r\n\r\n#These \"asserts\" using only for self-checking and not necessary for auto-testing\r\
+  \nif __name__ == '__main__':\r\n    assert checkio(\"(2,2),(6,2),(2,6)\") == \"\
+  (x-4)^2+(y-4)^2=2.83^2\"\r\n    assert checkio(\"(3,7),(6,9),(9,7)\") == \"(x-6)^2+(y-5.75)^2=3.25^2\""
+seconds_from_change: 9223372036854775807
