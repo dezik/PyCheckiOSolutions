@@ -1,8 +1,32 @@
 def checkio(expression):
-    return True or False
+    brackets = dict(zip([")", "}", "]"], ["(", "{", "["]))
+    expression = list(filter(lambda x: x in "(){}[]", expression))
+    i = 0
+    while i < len(expression):
+        if expression[i] in brackets.keys():
+            if expression[i - 1] == brackets[expression[i]]:
+                expression = expression[:i - 1] + expression[i + 1:]
+                i = 0
+            else:
+                return False
+        else:
+            i += 1
+    return len(expression) == 0
 
-#These "asserts" using only for self-checking and not necessary for auto-testing
+
+def checkio(expression):
+    stack = []
+    brackets = dict(zip([")", "}", "]"], ["(", "{", "["]))
+    for char in expression:
+        if char in brackets.values():
+            stack.append(char)
+        elif char in brackets.keys() and (len(stack) == 0 or stack.pop() != brackets[char]):
+            return False
+    return len(stack) == 0
+
+
 if __name__ == '__main__':
+    assert checkio("(((1+(1+1))))]") == False, "Simple"
     assert checkio("((5+3)*2+1)") == True, "Simple"
     assert checkio("{[(3+1)+2]+}") == True, "Different types"
     assert checkio("(3+{1-1)}") == False, ") is alone inside {}"
