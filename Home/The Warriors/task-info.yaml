@@ -92,4 +92,4 @@ code: |
       assert carl.is_alive == False
 
       print("Coding complete? Let's try tests!")
-seconds_from_change: 329148
+seconds_from_change: 607362

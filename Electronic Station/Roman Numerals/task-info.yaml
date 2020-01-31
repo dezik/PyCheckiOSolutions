@@ -2,32 +2,56 @@ type: checkiO
 files:
 - name: mission.py
   visible: true
-  text: |-
-    def checkio(data):
+  text: |
+    ZEROES = {"M": 1000, "C": 100, "X": 10, "I": 1}
+    FIVES = {"C": "D", "X": "L", "I": "V"}
+    NINES = {"C": "CM", "X": "XC", "I": "IX"}
+    FOURS = {"C": "CD", "X": "XL", "I": "IV"}
 
-        #replace this for solution
-        return ""
+    def checkio(data):
+        out = ""
+        for k, v in ZEROES.items():
+            if data % v != data:
+                period = data // v
+                if period == 4: out += FOURS[k]
+                elif period == 9: out += NINES[k]
+                elif 4 < period < 9: out += FIVES[k] + (k * (period % 5))
+                else: out += (k * (data // v))
+                data = data % v
+        return out
+
 
     if __name__ == '__main__':
-        #These "asserts" using only for self-checking and not necessary for auto-testing
         assert checkio(6) == 'VI', '6'
         assert checkio(76) == 'LXXVI', '76'
         assert checkio(499) == 'CDXCIX', '499'
         assert checkio(3888) == 'MMMDCCCLXXXVIII', '3888'
         print('Done! Go Check!')
   learner_created: false
-status: Unchecked
-code: |-
-  def checkio(data):
+status: Solved
+code: |
+  ZEROES = {"M": 1000, "C": 100, "X": 10, "I": 1}
+  FIVES = {"C": "D", "X": "L", "I": "V"}
+  NINES = {"C": "CM", "X": "XC", "I": "IX"}
+  FOURS = {"C": "CD", "X": "XL", "I": "IV"}
 
-      #replace this for solution
-      return ""
+  def checkio(data):
+      out = ""
+      for k, v in ZEROES.items():
+          if data % v != data:
+              period = data // v
+              if period == 4: out += FOURS[k]
+              elif period == 9: out += NINES[k]
+              elif 4 < period < 9: out += FIVES[k] + (k * (period % 5))
+              else: out += (k * (data // v))
+              data = data % v
+      return out
+
 
   if __name__ == '__main__':
-      #These "asserts" using only for self-checking and not necessary for auto-testing
       assert checkio(6) == 'VI', '6'
       assert checkio(76) == 'LXXVI', '76'
       assert checkio(499) == 'CDXCIX', '499'
       assert checkio(3888) == 'MMMDCCCLXXXVIII', '3888'
       print('Done! Go Check!')
-seconds_from_change: 9223372036854775807
+seconds_from_change: 1

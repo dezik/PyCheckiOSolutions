@@ -1,20 +1,4 @@
 def checkio(expression):
-    brackets = dict(zip([")", "}", "]"], ["(", "{", "["]))
-    expression = list(filter(lambda x: x in "(){}[]", expression))
-    i = 0
-    while i < len(expression):
-        if expression[i] in brackets.keys():
-            if expression[i - 1] == brackets[expression[i]]:
-                expression = expression[:i - 1] + expression[i + 1:]
-                i = 0
-            else:
-                return False
-        else:
-            i += 1
-    return len(expression) == 0
-
-
-def checkio(expression):
     stack = []
     brackets = dict(zip([")", "}", "]"], ["(", "{", "["]))
     for char in expression:
