@@ -1,5 +1,8 @@
+from functools import reduce
+
+
 def checkio(number: int) -> int:
-    return 1
+    return reduce(lambda x, y: x * y, filter(lambda x: x != 0, list(map(int, str(number)))))
 
 
 if __name__ == '__main__':
