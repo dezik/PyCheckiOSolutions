@@ -1,6 +1,5 @@
 def find_message(text: str) -> str:
-    """Find a secret message"""
-    return ""
+    return "".join(list(filter(lambda x: x.isupper(), text)))
 
 
 if __name__ == '__main__':

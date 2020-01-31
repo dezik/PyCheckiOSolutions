@@ -1,6 +1,5 @@
-def best_stock(a):
-    # your code here
-    return None
+def best_stock(a: dict):
+    return list(a.keys())[list(a.values()).index(max(a.values()))]
 
 
 if __name__ == '__main__':

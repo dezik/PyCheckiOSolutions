@@ -2,22 +2,36 @@ type: checkiO
 files:
 - name: mission.py
   visible: true
-  text: "def checkio(array):\n    \"\"\"\n        sums even-indexes elements and multiply\
-    \ at the last\n    \"\"\"\n    return 0\n\n#These \"asserts\" using only for self-checking\
-    \ and not necessary for auto-testing\nif __name__ == '__main__':\n    print('Example:')\n\
-    \    print(checkio([0, 1, 2, 3, 4, 5]))\n    \n    assert checkio([0, 1, 2, 3,\
-    \ 4, 5]) == 30, \"(0+2+4)*5=30\"\n    assert checkio([1, 3, 5]) == 30, \"(1+5)*5=30\"\
-    \n    assert checkio([6]) == 36, \"(6)*6=36\"\n    assert checkio([]) == 0, \"\
-    An empty array = 0\"\n    print(\"Coding complete? Click 'Check' to review your\
-    \ tests and earn cool rewards!\")\n"
+  text: |
+    def checkio(array: list):
+        return sum(array[::2]) * array.pop() if len(array) else 0
+
+
+    # These "asserts" using only for self-checking and not necessary for auto-testing
+    if __name__ == '__main__':
+        print('Example:')
+        print(checkio([0, 1, 2, 3, 4, 5]))
+
+        assert checkio([0, 1, 2, 3, 4, 5]) == 30, "(0+2+4)*5=30"
+        assert checkio([1, 3, 5]) == 30, "(1+5)*5=30"
+        assert checkio([6]) == 36, "(6)*6=36"
+        assert checkio([]) == 0, "An empty array = 0"
+        print("Coding complete? Click 'Check' to review your tests and earn cool rewards!")
   learner_created: false
-status: Unchecked
-code: "def checkio(array):\n    \"\"\"\n        sums even-indexes elements and multiply\
-  \ at the last\n    \"\"\"\n    return 0\n\n#These \"asserts\" using only for self-checking\
-  \ and not necessary for auto-testing\nif __name__ == '__main__':\n    print('Example:')\n\
-  \    print(checkio([0, 1, 2, 3, 4, 5]))\n    \n    assert checkio([0, 1, 2, 3, 4,\
-  \ 5]) == 30, \"(0+2+4)*5=30\"\n    assert checkio([1, 3, 5]) == 30, \"(1+5)*5=30\"\
-  \n    assert checkio([6]) == 36, \"(6)*6=36\"\n    assert checkio([]) == 0, \"An\
-  \ empty array = 0\"\n    print(\"Coding complete? Click 'Check' to review your tests\
-  \ and earn cool rewards!\")\n"
-seconds_from_change: 9223372036854775807
+status: Solved
+code: |
+  def checkio(array: list):
+      return sum(array[::2]) * array.pop() if len(array) else 0
+
+
+  # These "asserts" using only for self-checking and not necessary for auto-testing
+  if __name__ == '__main__':
+      print('Example:')
+      print(checkio([0, 1, 2, 3, 4, 5]))
+
+      assert checkio([0, 1, 2, 3, 4, 5]) == 30, "(0+2+4)*5=30"
+      assert checkio([1, 3, 5]) == 30, "(1+5)*5=30"
+      assert checkio([6]) == 36, "(6)*6=36"
+      assert checkio([]) == 0, "An empty array = 0"
+      print("Coding complete? Click 'Check' to review your tests and earn cool rewards!")
+seconds_from_change: 1308

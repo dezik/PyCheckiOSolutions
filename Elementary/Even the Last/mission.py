@@ -1,8 +1,5 @@
-def checkio(array):
-    """
-        sums even-indexes elements and multiply at the last
-    """
-    return 0
+def checkio(array: list):
+    return sum(array[::2]) * array.pop() if len(array) else 0
 
 
 # These "asserts" using only for self-checking and not necessary for auto-testing

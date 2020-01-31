@@ -1,20 +1,12 @@
-# Your optional code here
-# You can import some modules or create additional functions
-
-
 def checkio(number: int) -> str:
-    # Your code here
-    # It's main function. Don't remove this function
-    # It's using for auto-testing and must return a result for check.
+    out = []
+    if number % 3 == 0:
+        out.append("Fizz")
+    if number % 5 == 0:
+        out.append("Buzz")
+    return str(number) if not out else " ".join(out)
 
-    # replace this for solution
-    return 'Fizz Buzz'
 
-
-# Some hints:
-# Convert a number in the string with str(n)
-
-# These "asserts" using only for self-checking and not necessary for auto-testing
 if __name__ == '__main__':
     print('Example:')
     print(checkio(15))

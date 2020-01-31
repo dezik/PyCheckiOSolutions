@@ -20,4 +20,4 @@ code: |
   if __name__ == '__main__':
       print(checkio([1, 2, 3]))
       print(checkio([2, 2, 2, 2, 2, 2]))
-seconds_from_change: 710158
+seconds_from_change: 712932

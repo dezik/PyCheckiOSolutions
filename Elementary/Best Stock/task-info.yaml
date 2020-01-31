@@ -3,9 +3,8 @@ files:
 - name: mission.py
   visible: true
   text: |
-    def best_stock(a):
-        # your code here
-        return None
+    def best_stock(a: dict):
+        return list(a.keys())[list(a.values()).index(max(a.values()))]
 
 
     if __name__ == '__main__':
@@ -17,11 +16,10 @@ files:
         assert best_stock({"CAC": 91.1, "ATX": 1.01, "TASI": 120.9}) == "TASI"
         print("Coding complete? Click 'Check' to earn cool rewards!")
   learner_created: false
-status: Unchecked
+status: Solved
 code: |
-  def best_stock(a):
-      # your code here
-      return None
+  def best_stock(a: dict):
+      return list(a.keys())[list(a.values()).index(max(a.values()))]
 
 
   if __name__ == '__main__':
@@ -32,4 +30,4 @@ code: |
       assert best_stock({"CAC": 10.0, "ATX": 390.2, "WIG": 1.2}) == "ATX"
       assert best_stock({"CAC": 91.1, "ATX": 1.01, "TASI": 120.9}) == "TASI"
       print("Coding complete? Click 'Check' to earn cool rewards!")
-seconds_from_change: 9223372036854775807
+seconds_from_change: 541
