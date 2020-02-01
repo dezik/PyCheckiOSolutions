@@ -4,11 +4,10 @@ files:
   visible: true
   text: |
     def second_index(text: str, symbol: str) -> [int, None]:
-        """
-            returns the second index of a symbol in a given text
-        """
-        # your code here
-        return 0
+        try:
+            return text.index(symbol, text.index(symbol) + 1)
+        except ValueError:
+            return None
 
 
     if __name__ == '__main__':
@@ -23,14 +22,13 @@ files:
         assert second_index("hi mr Mayor", " ") == 5, "Fifth"
         print('You are awesome! All tests are done! Go Check it!')
   learner_created: false
-status: Unchecked
+status: Solved
 code: |
   def second_index(text: str, symbol: str) -> [int, None]:
-      """
-          returns the second index of a symbol in a given text
-      """
-      # your code here
-      return 0
+      try:
+          return text.index(symbol, text.index(symbol) + 1)
+      except ValueError:
+          return None
 
 
   if __name__ == '__main__':
@@ -44,4 +42,4 @@ code: |
       assert second_index("hi mayor", " ") is None, "Fourth"
       assert second_index("hi mr Mayor", " ") == 5, "Fifth"
       print('You are awesome! All tests are done! Go Check it!')
-seconds_from_change: 9223372036854775807
+seconds_from_change: 3210

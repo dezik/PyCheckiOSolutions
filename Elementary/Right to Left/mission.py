@@ -1,8 +1,5 @@
-def left_join(phrases):
-    """
-        Join strings and replace "right" to "left"
-    """
-    return "left"
+def left_join(phrases: list):
+    return ",".join(phrases).replace("right", "left")
 
 
 if __name__ == '__main__':
