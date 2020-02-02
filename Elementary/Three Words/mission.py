@@ -1,5 +1,13 @@
 def checkio(words: str) -> bool:
-    return True or False
+    count = 0
+    for word in words.split(" "):
+        if word.isalpha():
+            count += 1
+            if count > 2:
+                return True
+        else:
+            count = 0
+    return False
 
 
 # These "asserts" using only for self-checking and not necessary for auto-testing
