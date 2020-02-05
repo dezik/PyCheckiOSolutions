@@ -69,4 +69,4 @@ code: |
       assert is_covered([30, 10], [[0, 10, 10], [10, 0, 10], [20, 10, 10], [30, 0, 10]]) == True
       assert is_covered([30, 10], [[0, 10, 8], [10, 0, 7], [20, 10, 9], [30, 0, 10]]) == False
       print("Coding complete? Click 'Check' to earn cool rewards!")
-seconds_from_change: 847102
+seconds_from_change: 1047868
