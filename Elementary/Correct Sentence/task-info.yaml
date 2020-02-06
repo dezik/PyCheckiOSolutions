@@ -40,4 +40,4 @@ code: |
       assert correct_sentence("welcome to New York") == "Welcome to New York."
 
       print("Coding complete? Click 'Check' to earn cool rewards!")
-seconds_from_change: 414758
+seconds_from_change: 494925

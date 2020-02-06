@@ -27,4 +27,4 @@ code: "def probability(dice_number, sides, target):\n    return 0.0\n\nif __name
   \ 0.2222)), \"Small dice\"\n    assert(almost_equal(probability(2, 3, 7), 0.0000)),\
   \ \"Never!\"\n    assert(almost_equal(probability(3, 6, 7), 0.0694)), \"Three dice\"\
   \n    assert(almost_equal(probability(10, 10, 50), 0.0375)), \"Many dice, many sides\""
-seconds_from_change: 688669
+seconds_from_change: 768835

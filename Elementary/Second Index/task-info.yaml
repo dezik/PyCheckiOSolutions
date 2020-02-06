@@ -42,4 +42,4 @@ code: |
       assert second_index("hi mayor", " ") is None, "Fourth"
       assert second_index("hi mr Mayor", " ") == 5, "Fifth"
       print('You are awesome! All tests are done! Go Check it!')
-seconds_from_change: 349664
+seconds_from_change: 429831

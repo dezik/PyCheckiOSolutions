@@ -72,4 +72,4 @@ code: |
       assert checkio(40) == 'forty', "6th example"
       assert not checkio(212).endswith(' '), "Don't forget strip whitespaces at the end of string"
       print('Done! Go and Check it!')
-seconds_from_change: 779414
+seconds_from_change: 859580
