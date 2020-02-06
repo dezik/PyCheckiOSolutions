@@ -4,9 +4,10 @@ files:
   visible: true
   text: |
     def checkio(number: int) -> int:
-        return 1
+        return f"{number:b}".count("1")
 
-    #These "asserts" using only for self-checking and not necessary for auto-testing
+
+    # These "asserts" using only for self-checking and not necessary for auto-testing
     if __name__ == '__main__':
         assert checkio(4) == 1
         assert checkio(15) == 4
@@ -14,16 +15,17 @@ files:
         assert checkio(1022) == 9
         print("Coding complete? Click 'Check' to review your tests and earn cool rewards!")
   learner_created: false
-status: Unchecked
+status: Solved
 code: |
   def checkio(number: int) -> int:
-      return 1
+      return f"{number:b}".count("1")
 
-  #These "asserts" using only for self-checking and not necessary for auto-testing
+
+  # These "asserts" using only for self-checking and not necessary for auto-testing
   if __name__ == '__main__':
       assert checkio(4) == 1
       assert checkio(15) == 4
       assert checkio(1) == 1
       assert checkio(1022) == 9
       print("Coding complete? Click 'Check' to review your tests and earn cool rewards!")
-seconds_from_change: 9223372036854775807
+seconds_from_change: 3264

@@ -34,4 +34,4 @@ code: |
       assert index_power([0, 1], 0) == 1, "Zero power"
       assert index_power([1, 2], 3) == -1, "IndexError"
       print("Coding complete? Click 'Check' to review your tests and earn cool rewards!")
-seconds_from_change: 494799
+seconds_from_change: 498670

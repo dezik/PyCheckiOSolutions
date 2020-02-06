@@ -1,11 +1,17 @@
-def checkio(data):
-    return 0
+def checkio(data: list) -> float:
+    out = 0
+    for i, (x, y) in enumerate(data):
+        j = 0 if len(data) <= i + 1 else i + 1
+        out += x * data[j][1] - y * data[j][0]
+    return round(abs(out) / 2, 2)
+
 
 if __name__ == '__main__':
-    #This part is using only for self-checking and not necessary for auto-testing
+    # This part is using only for self-checking and not necessary for auto-testing
     def almost_equal(checked, correct, significant_digits=1):
         precision = 0.1 ** significant_digits
         return correct - precision < checked < correct + precision
+
 
     assert almost_equal(checkio([[1, 1], [9, 9], [9, 1]]), 32), "The half of the square"
     assert almost_equal(checkio([[4, 10], [7, 1], [1, 4]]), 22.5), "Triangle"

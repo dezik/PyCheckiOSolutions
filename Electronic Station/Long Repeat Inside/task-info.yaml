@@ -54,4 +54,4 @@ code: |
       assert repeat_inside('abc') == '', "Forth"
       assert repeat_inside('abcabcabab') == 'abcabc', "Fifth"
       print('"Run" is good. How is "Check"?')
-seconds_from_change: 1272
+seconds_from_change: 5144
