@@ -1,0 +1,80 @@
+<p>
+    In linear algebra, the transpose of a matrix
+    <b>A</b> is another matrix <b>A</b><sup>T</sup> (also written <b>A</b>′, <b>A</b><sup>tr</sup>,<sup>t</sup><b>A</b>
+    or <b>A</b><sup>t</sup>) created by any one of the following equivalent
+    actions:</p>
+
+<ul>
+    <li>reflect <b>A</b> over its main diagonal (which runs from top-left to
+        bottom-right) to obtain <b>A</b><sup>T</sup></li>
+    <li>write the rows of <b>A</b> as the columns of <b>A</b><sup>T</sup></li>
+    <li>write the columns of <b>A</b> as the rows of <b>A</b><sup>T</sup></li>
+</ul>
+
+<p>Formally, the <i>i</i><sup>th</sup> row, <i>j</i><sup>th</sup> column element of
+    <b>A</b><sup>T</sup> is the <i>j</i><sup>th</sup> row, <i>i</i><sup>th</sup> column element of
+    <b>A</b>:</p>
+
+<p>
+    [<b>A</b><sup>T</sup>]<sub>i j</sub> = [<b>A</b>]<sub>j i</sub>
+</p>
+
+<p>If <b>A</b> is an <span class="nowrap"><i>m</i> × <i>n</i></span> matrix then
+    <b>A</b><sup>T</sup> is an <span class="nowrap"><i>n</i> × <i>m</i></span>
+    matrix.</p>
+
+<p>You have been given a matrix as a 2D list with integers.
+    Your task is to return a transposed matrix based on input.
+</p>
+
+<div style="text-align: center">
+    <img src="https://py-static.checkio.org/media/task/media/0ecf567daa38409a93b43fe1efaf91cd/transposed-matrix.png" style="max-height: 350px">
+</div>
+
+<p>
+    <strong>Input: </strong> A matrix as a list of lists with integers.
+</p>
+
+<p>
+    <strong>Output: </strong>The transposed matrix as a list/tuple of lists/tuples with integers.
+</p>
+
+<p class="for_info_only">
+<strong>Example:</strong>
+
+<pre class="brush: python">
+checkio([[1, 2, 3],
+         [4, 5, 6],
+         [7, 8, 9]]) == [[1, 4, 7],
+                         [2, 5, 8],
+                         [3, 6, 9]])
+checkio([[1, 4, 3],
+         [8, 2, 6],
+         [7, 8, 3],
+         [4, 9, 6],
+         [7, 8, 1]]) == [[1, 8, 7, 4, 7],
+                         [4, 2, 8, 9, 8],
+                         [3, 6, 3, 6, 1]])
+</pre>
+
+</p>
+
+<p class="for_info_only">
+    <strong>How it is used: </strong>
+    The most obvious use for this idea is in mathematical software,
+    but the concept can be applied in the area of vector graphics.
+    On a computer, one can often avoid explicitly transposing a matrix in memory by simply accessing the same data in a different order.
+</p>
+
+<p>
+    <strong>Precondition:</strong><br>
+    0 &lt; len(<strong>matrix</strong>) &lt; 10<br>
+    all(0 &lt; len(row) &lt; 10 for row in <strong>matrix</strong>)
+</p>
+
+<!--
+<p class="for_info_only">
+    <strong>How to use TryIt: </strong><br>
+    <iframe width="560" height="315" src="//www.youtube.com/embed/r62S8J2Oa3c" frameborder="0" allowfullscreen></iframe>
+</p>
+-->

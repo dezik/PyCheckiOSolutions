@@ -120,4 +120,4 @@ code: |
           unit_2.health -= unit_1.attack
           unit_1, unit_2 = unit_2, unit_1
       return (first is unit_1 and unit_1.is_alive) or (first is unit_2 and unit_2.is_alive)
-seconds_from_change: 4801
+seconds_from_change: 437855

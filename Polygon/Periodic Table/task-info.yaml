@@ -1,0 +1,27 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "def checkio(element):\r\n    \"\"\"\r\n        string of element arguments\r\
+    \n    \"\"\"\r\n    return [\"\", u\"\", \"\"]\r\n\r\n\r\nif __name__ == '__main__':\r\
+    \n    #These \"asserts\" using only for self-checking and not necessary for auto-testing\r\
+    \n    assert (checkio('H') == [\"1\", u\"1s¹\", \"1\"]), \"First Test - 1s¹\"\r\
+    \n    assert (checkio('He') == [\"2\", u\"1s²\", \"2\"]), \"Second Test - 1s²\"\
+    \r\n    assert (checkio('Al') == [\"13\", u\"[Ne] 3s² 3p¹\", \"2 2 222 2 100\"\
+    ]), \"Third Test - 1s² 2s² 2p⁶ 3s² 3p¹\"\r\n    assert (checkio('O') == [\"8\"\
+    , u\"[He] 2s² 2p⁴\", \"2 2 211\"]), \"Fourth Test - 1s² 2s² 2p⁴\"\r\n    assert\
+    \ (checkio('Li') == [\"3\", u\"[He] 2s¹\", \"2 1\"]), \"Fifth Test - 1s² 2s¹\"\
+    \r\n\r\n    print('All done!')\r\n"
+  learner_created: false
+status: Unchecked
+code: "def checkio(element):\r\n    \"\"\"\r\n        string of element arguments\r\
+  \n    \"\"\"\r\n    return [\"\", u\"\", \"\"]\r\n\r\n\r\nif __name__ == '__main__':\r\
+  \n    #These \"asserts\" using only for self-checking and not necessary for auto-testing\r\
+  \n    assert (checkio('H') == [\"1\", u\"1s¹\", \"1\"]), \"First Test - 1s¹\"\r\n\
+  \    assert (checkio('He') == [\"2\", u\"1s²\", \"2\"]), \"Second Test - 1s²\"\r\
+  \n    assert (checkio('Al') == [\"13\", u\"[Ne] 3s² 3p¹\", \"2 2 222 2 100\"]),\
+  \ \"Third Test - 1s² 2s² 2p⁶ 3s² 3p¹\"\r\n    assert (checkio('O') == [\"8\", u\"\
+  [He] 2s² 2p⁴\", \"2 2 211\"]), \"Fourth Test - 1s² 2s² 2p⁴\"\r\n    assert (checkio('Li')\
+  \ == [\"3\", u\"[He] 2s¹\", \"2 1\"]), \"Fifth Test - 1s² 2s¹\"\r\n\r\n    print('All\
+  \ done!')\r\n"
+seconds_from_change: 9223372036854775807

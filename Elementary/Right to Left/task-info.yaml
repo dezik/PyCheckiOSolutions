@@ -34,4 +34,4 @@ code: |
       assert left_join(("brightness wright",)) == "bleftness wleft", "One phrase"
       assert left_join(("enough", "jokes")) == "enough,jokes", "Nothing to replace"
       print("Coding complete? Click 'Check' to review your tests and earn cool rewards!")
-seconds_from_change: 434904
+seconds_from_change: 867959

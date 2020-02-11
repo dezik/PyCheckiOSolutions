@@ -1,0 +1,101 @@
+<p>
+    <a href="https://en.wikipedia.org/wiki/Braille">Braille</a> is a tactile writing system used by the blind and the visually impaired. It is
+    traditionally written with embossed paper. Braille characters are small rectangular blocks,
+    called cells, which contain tiny palpable bumps called raised dots. The number and arrangement
+    of these dots distinguish one character from another.
+</p>
+
+<p>
+    We will use a 6-dots Braille alphabet. Each letter can be represented as a 3x2 matrix where 1 is
+    a raised dot and 0 is an empty space.
+</p>
+
+<p style="text-align: center;">
+    <img class="for_info_only" title="alphabet" src="https://py-static.checkio.org/media/task/media/7c2d8e23738a453fa7e1cf752c95fb04/alphabet.svg" alt="alphabet"
+         width="700px"/>
+    <img class="for_editor_only" title="alphabet" src="https://py-static.checkio.org/media/task/media/7c2d8e23738a453fa7e1cf752c95fb04/alphabet.svg" alt="alphabet"
+         width="380px"/>
+</p>
+<p>
+    (Letter W is not original)
+</p>
+
+<p>
+    Letters should be separated by an empty column. Whitespaces are two empty columns (plus a
+    separator empty column if it is between letters). Various formatting marks indicate the values
+    of the letters that follow them. They have no direct equivalent in print. The most important
+    indicators in English Braille are: "capital" and "number".
+    These marks work as "shift" - only for a follow letter.
+</p>
+<p style="text-align: center;">
+    <img title="formating" src="https://py-static.checkio.org/media/task/media/7c2d8e23738a453fa7e1cf752c95fb04/formating.svg" alt="formating" width="300px"/>
+</p>
+
+<p>
+    We will use several basic punctuation symbols:
+</p>
+
+<p style="text-align: center;">
+    <img class="for_info_only" title="punctuation" src="https://py-static.checkio.org/media/task/media/7c2d8e23738a453fa7e1cf752c95fb04/punctuation.svg" alt="punctuation"
+         width="650px"/>
+    <img class="for_editor_only" title="punctuation" src="https://py-static.checkio.org/media/task/media/7c2d8e23738a453fa7e1cf752c95fb04/punctuation.svg"
+         alt="punctuation"
+         width="380px"/>
+</p>
+
+<p>
+    You are given a page of text and you should convert it into Braille. The page contains one or
+    several lines represented as a matrix. Each line contains no more than 10 symbols (including
+    non-printed). Lines are separated by one empty row. Symbols are separated by empty columns but
+    there are no separators in beginnings and ends of lines. If text can be placed in one line, then
+    the page width is proportional to the length of the text. If the page has more than one line,
+    then the width is equal to the longer line and the final line is appended by whitespaces.
+</p>
+
+<p>
+    For example, this is the text "hello 1st World!".
+</p>
+
+<p style="text-align: center;">
+    <img class="for_info_only" title="example" src="https://py-static.checkio.org/media/task/media/7c2d8e23738a453fa7e1cf752c95fb04/example.svg" alt="example"
+         width="750px"/>
+    <img class="for_editor_only" title="example" src="https://py-static.checkio.org/media/task/media/7c2d8e23738a453fa7e1cf752c95fb04/example.svg" alt="example"
+         width="380px"/>
+</p>
+
+<p>
+    <strong>Input: </strong> A text as a string.
+</p>
+
+<p>
+    <strong>Output: </strong> The page as a list of lists or tuple of tuples with integers (1/0).
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Example:</strong>
+    </p>
+    <pre class="brush: python">
+braille_page("hello 1st World!") == (
+    (1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1),
+    (1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1),
+    (0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0),
+    (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+    (0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+    (0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0),
+    (0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0))</pre>
+</div>
+
+<p class="for_info_only">
+    <strong>How it is used: </strong>
+    Braille is an international concept which allow blind people to read written text. The script
+    which you will write for this mission would be useful when parsing braille text and formatting
+    it for printing, or it could be used to translate existing text into braille for others.
+</p>
+
+<p>
+    <strong>Precondition:</strong><br>
+    0 &lt; len(text)<br>
+    all(ch in string.ascii_letters + " .,!?-_0123456789" for ch in text)
+</p>

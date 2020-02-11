@@ -22,4 +22,4 @@ code: |
       assert checkio("hello,world", "hello,earth") == "hello", "Hello"
   assert checkio("one,two,three", "four,five,six") == "", "Too different"
   assert checkio("one,two,three", "four,five,one,two,six,three") == "one,three,two", "1 2 3"
-seconds_from_change: 3713
+seconds_from_change: 436767

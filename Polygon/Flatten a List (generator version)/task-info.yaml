@@ -1,0 +1,19 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "def flat_list(array):\r\n    return array\r\n\r\nif __name__ == '__main__':\r\
+    \n    assert flat_list([1, 2, 3]) == [1, 2, 3], \"First\"\r\n    assert flat_list([1,\
+    \ [2, 2, 2], 4]) == [1, 2, 2, 2, 4], \"Second\"\r\n    assert flat_list([[[2]],\
+    \ [4, [5, 6, [6], 6, 6, 6], 7]]) == [2, 4, 5, 6, 6, 6, 6, 6, 7], \"Third\"\r\n\
+    \    assert flat_list([-1, [1, [-2], 1], -1]) == [-1, 1, -2, 1, -1], \"Four\"\r\
+    \n    print('Done! Check it')"
+  learner_created: false
+status: Unchecked
+code: "def flat_list(array):\r\n    return array\r\n\r\nif __name__ == '__main__':\r\
+  \n    assert flat_list([1, 2, 3]) == [1, 2, 3], \"First\"\r\n    assert flat_list([1,\
+  \ [2, 2, 2], 4]) == [1, 2, 2, 2, 4], \"Second\"\r\n    assert flat_list([[[2]],\
+  \ [4, [5, 6, [6], 6, 6, 6], 7]]) == [2, 4, 5, 6, 6, 6, 6, 6, 7], \"Third\"\r\n \
+  \   assert flat_list([-1, [1, [-2], 1], -1]) == [-1, 1, -2, 1, -1], \"Four\"\r\n\
+  \    print('Done! Check it')"
+seconds_from_change: 9223372036854775807

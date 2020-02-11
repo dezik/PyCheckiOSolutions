@@ -1,0 +1,42 @@
+<p>
+    Sofia has given you a schedule and two dates and told you she needs help planning her weekends. 
+    She has asked you to count each day of rest (Saturday and Sunday) starting from the initial date to final date. 
+    You should count the initial and final dates if they fall on a Saturday or Sunday.
+</p>
+
+<p>
+    The dates are given as <strong>datetime.date</strong>
+    (<a href="http://docs.python.org/2/library/datetime.html#date-objects">Read about this module here</a>).
+    The result is an integer.
+</p>
+
+<p>
+    <strong>Input: </strong> Start and end date as datetime.date.
+</p>
+
+<p>
+    <strong>Output: </strong> The quantity of the rest days as an integer.
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Example:</strong>
+    </p>
+    <pre class="brush: python">checkio(date(2013, 9, 18), date(2013, 9, 23)) == 2
+checkio(date(2013, 1, 1), date(2013, 2, 1)) == 8
+checkio(date(2013, 2, 2), date(2013, 2, 3)) == 2
+</pre>
+</div>
+
+<p class="for_info_only">
+    <strong>How it is used: </strong>
+    Now is a good time to learn how to work with dates.
+    These ideas here often come up in calendar apps, customer relation management software,
+    automated messaging schedulers among many other things.
+</p>
+
+<p>
+    <strong>Precondition:</strong>
+    start_date &lt; end_date.
+    </p>

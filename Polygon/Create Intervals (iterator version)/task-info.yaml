@@ -1,0 +1,31 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "def create_intervals(data):\r\n    \"\"\"\r\n        Create a list of intervals\
+    \ out of set of ints.\r\n    \"\"\"\r\n    # your code here\r\n    return None\r\
+    \n\r\nif __name__ == '__main__':\r\n    #These \"asserts\" using only for self-checking\
+    \ and not necessary for auto-testing\r\n    res = create_intervals(iter(sorted(list({1,\
+    \ 2, 3, 4, 5, 7, 8, 12}))))\r\n    assert hasattr(res, '__iter__'), \"your function\
+    \ should return the iterator object\"\r\n    assert hasattr(res, '__next__'),\
+    \ \"your function should return the iterator object\"\r\n\r\n    assert list(create_intervals(iter(sorted(list({1,\
+    \ 2, 3, 4, 5, 7, 8, 12}))))) == [\r\n                                        \
+    \         (1, 5), (7, 8), (12, 12)], \"First\"\r\n    assert list(create_intervals(iter(sorted(list({1,\
+    \ 2, 3, 6, 7, 8, 4, 5}))))) == [\r\n                                         \
+    \        (1, 8)], \"Second\"\r\n    print('Almost done! The only thing left to\
+    \ do is to Check it!')"
+  learner_created: false
+status: Unchecked
+code: "def create_intervals(data):\r\n    \"\"\"\r\n        Create a list of intervals\
+  \ out of set of ints.\r\n    \"\"\"\r\n    # your code here\r\n    return None\r\
+  \n\r\nif __name__ == '__main__':\r\n    #These \"asserts\" using only for self-checking\
+  \ and not necessary for auto-testing\r\n    res = create_intervals(iter(sorted(list({1,\
+  \ 2, 3, 4, 5, 7, 8, 12}))))\r\n    assert hasattr(res, '__iter__'), \"your function\
+  \ should return the iterator object\"\r\n    assert hasattr(res, '__next__'), \"\
+  your function should return the iterator object\"\r\n\r\n    assert list(create_intervals(iter(sorted(list({1,\
+  \ 2, 3, 4, 5, 7, 8, 12}))))) == [\r\n                                          \
+  \       (1, 5), (7, 8), (12, 12)], \"First\"\r\n    assert list(create_intervals(iter(sorted(list({1,\
+  \ 2, 3, 6, 7, 8, 4, 5}))))) == [\r\n                                           \
+  \      (1, 8)], \"Second\"\r\n    print('Almost done! The only thing left to do\
+  \ is to Check it!')"
+seconds_from_change: 9223372036854775807

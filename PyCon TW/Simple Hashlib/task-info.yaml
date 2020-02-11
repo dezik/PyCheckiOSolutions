@@ -1,0 +1,17 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "def checkio(hashed_string, algorithm):\r\n    return None\r\n\r\nif __name__\
+    \ == '__main__':\r\n    #These \"asserts\" using only for self-checking and not\
+    \ necessary for auto-testing\r\n    assert checkio('welcome', 'md5') == '40be4e59b9a2a2b5dffb918c0e86b3d7'\r\
+    \n    assert checkio('happy spam', 'sha224') == '6e9dc3e01d57f1598c2b40ce59fc3527e698c77b15d0840ae96a8b5e'\r\
+    \n"
+  learner_created: false
+status: Unchecked
+code: "def checkio(hashed_string, algorithm):\r\n    return None\r\n\r\nif __name__\
+  \ == '__main__':\r\n    #These \"asserts\" using only for self-checking and not\
+  \ necessary for auto-testing\r\n    assert checkio('welcome', 'md5') == '40be4e59b9a2a2b5dffb918c0e86b3d7'\r\
+  \n    assert checkio('happy spam', 'sha224') == '6e9dc3e01d57f1598c2b40ce59fc3527e698c77b15d0840ae96a8b5e'\r\
+  \n"
+seconds_from_change: 9223372036854775807
