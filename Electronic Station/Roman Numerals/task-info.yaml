@@ -54,4 +54,4 @@ code: |
       assert checkio(499) == 'CDXCIX', '499'
       assert checkio(3888) == 'MMMDCCCLXXXVIII', '3888'
       print('Done! Go Check!')
-seconds_from_change: 876530
+seconds_from_change: 878514

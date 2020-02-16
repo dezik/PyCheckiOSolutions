@@ -1,12 +1,18 @@
 import sendgrid
+import json
 
-API_KEY = 'Registrate your own key'
+API_KEY = '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'
 
 sg = sendgrid.SendGridAPIClient(API_KEY)
 
 
-def best_country(str_date):
-    return 'UA'
+def best_country(str_date: str):
+    response = sg.client.geo.stats.get(query_params={
+        'start_date': str_date,
+        'end_date': str_date
+    })
+    return max(json.loads(response.body)[0]['stats'],
+               key=lambda a: a['metrics']['unique_clicks'])["name"]
 
 
 if __name__ == '__main__':

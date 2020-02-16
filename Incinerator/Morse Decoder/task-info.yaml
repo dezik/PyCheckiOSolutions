@@ -62,4 +62,4 @@ code: |
       assert morse_decoder("..--- ----- .---- ---..") == "2018"
       assert morse_decoder(".. -   .-- .- ...   .-   --. --- --- -..   -.. .- -.--") == "It was a good day"
       print("Coding complete? Click 'Check' to earn cool rewards!")
-seconds_from_change: 778769
+seconds_from_change: 780753

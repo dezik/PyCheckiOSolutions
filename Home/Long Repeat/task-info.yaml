@@ -44,4 +44,4 @@ code: |
       assert long_repeat('abababaab') == 2, "Third"
       assert long_repeat('') == 0, "Empty"
       print('"Run" is good. How is "Check"?')
-seconds_from_change: 2100168
+seconds_from_change: 2102153
