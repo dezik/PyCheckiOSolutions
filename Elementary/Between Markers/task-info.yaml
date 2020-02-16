@@ -42,4 +42,4 @@ code: |
       assert between_markers('No hi', '[b]', '[/b]') == 'No hi', 'No markers at all'
       assert between_markers("No <hi> one", ">", "<") == '', 'Wrong direction'
       print('Wow, you are doing pretty good. Time to check it!')
-seconds_from_change: 1158426
+seconds_from_change: 1158554
