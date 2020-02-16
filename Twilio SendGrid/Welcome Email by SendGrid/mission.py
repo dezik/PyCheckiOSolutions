@@ -1,15 +1,20 @@
 import sendgrid
 from sendgrid.helpers.mail import Mail
 
-API_KEY = 'Registrate your own key'
+API_KEY = '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'
 SUBJECT = 'Welcome'
 BODY = 'Hi {}'
 
 sg = sendgrid.SendGridAPIClient(API_KEY)
 
 
-def send_email(email, name):
-    pass
+def send_email(email: str, name: str):
+    message = Mail(
+        from_email='from_email@example.com',
+        to_emails=email,
+        subject=SUBJECT,
+        plain_text_content=BODY.format(name))
+    sg.send(message)
 
 
 if __name__ == '__main__':

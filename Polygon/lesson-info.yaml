@@ -1,6 +1,5 @@
 type: checkiO
 content:
-- Similar Triangles
 - Flatten a List (iterator version)
 - Merge Intervals (generator version)
 - Create Intervals (iterator version)
